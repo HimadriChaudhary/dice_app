@@ -16,13 +16,13 @@ class Dice extends StatefulWidget {
 }
 
 class _DiceState extends State<Dice> {
-  int leftDice = 1;
-  int rightDice = 1;
+  int topDice = 1;
+  int bottomDice = 1;
 
   Roll() {
     setState(() {
-      leftDice = Random().nextInt(6) + 1;
-      rightDice = Random().nextInt(6) + 1;
+      topDice = Random().nextInt(6) + 1;
+      bottomDice = Random().nextInt(6) + 1;
     });
   }
 
@@ -44,7 +44,7 @@ class _DiceState extends State<Dice> {
                   Roll();
                 },
                 child: Image.asset(
-                  'image/dice$leftDice.png',
+                  'image/dice$topDice.png',
                   fit: BoxFit.fill,
                   width: 300,
                 ),
@@ -57,7 +57,7 @@ class _DiceState extends State<Dice> {
                   Roll();
                 },
                 child: Image.asset(
-                  'image/dice$rightDice.png',
+                  'image/dice$bottomDice.png',
                   fit: BoxFit.fill,
                   width: 300,
                 ),
